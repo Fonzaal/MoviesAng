@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  Hello from search!
+</div>
+<div ng-controller="searchCtrl" ng-init="">
+  <p>
+    <input type="text" ng-model="movie" placeholder="Write here"/>
+    <input type="button" ng-click="getMovies()" value="Search">
+  </p>
+
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Type</th>
+    </tr>
+    <tr ng-repeat="movie in moviesList">
+      <td><a ui-sref="details({movieId: movie.imdbID})">{{movie.Title}}</a></td>
+      <td>{{movie.Year}}</td>
+      <td>{{movie.Type}}</td>
+    </tr>
+  </table>
+  <div >
+    <p>{{movie.Title}}</p>
+  </div>
+</div>
+

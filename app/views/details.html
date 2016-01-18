@@ -1,0 +1,22 @@
+<div ng-controller="detailsCtrl" ng-init="getDetails()">
+  <h2>[{{details.Type}}] {{details.Title}} ({{details.Year}})</h2>
+  <img ng-src="{{details.Poster_}}" alt="{{details.Title}}"/>
+  <h4>Rated: {{details.Rated}}</h4>
+  <h4>Released: {{details.Released}}</h4>
+  <h4>Runtime: {{details.Runtime}}</h4>
+  <h4>Genre: {{details.Genre}}</h4>
+  <h4>Director: {{details.Director}}</h4>
+  <h4>Writer: {{details.Writer}}</h4>
+  <h4>Actors: {{details.Actors}}</h4>
+  <h4>Plot: {{details.Plot}}</h4>
+  <h4>Language: {{details.Language}}</h4>
+  <h4>Country: {{details.Country}}</h4>
+  <h4>Awards: {{details.Awards}}</h4>
+  <h4>Metascore: {{details.Metascore}}</h4>
+  <h4>Rating: {{details.imdbRating}}</h4>
+  <h4>Votes: {{details.imdbVotes}}</h4>
+  <p></p>
+  <div ng-show="details.Type == 'series'">
+    List of episodes to be added.
+  </div>
+</div>
