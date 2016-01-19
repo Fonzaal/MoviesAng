@@ -1,9 +1,12 @@
+'use strict';
+
 /**
  * @ngdoc overview
  * @name searchCtrl
  * @description
  *
  */
+
 angular.module('moviesApp')
   .controller('searchCtrl', function($scope, searchFactory){
     $scope.moviesList = {};

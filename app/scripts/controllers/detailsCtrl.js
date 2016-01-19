@@ -1,9 +1,12 @@
+"use strict";
+
 /**
  * @ngdoc overview
  * @name detailsCtrl
  * @description
  *
  */
+
 angular.module('moviesApp')
 .controller('detailsCtrl', function ($scope, $stateParams, searchFactory){
   $scope.details = {};

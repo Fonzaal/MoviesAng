@@ -7,6 +7,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('moviesApp', [
     'ngCookies',
