@@ -16,7 +16,33 @@
   <h4>Rating: {{details.imdbRating}}</h4>
   <h4>Votes: {{details.imdbVotes}}</h4>
   <p></p>
-  <div ng-show="details.Type == 'series'">
-    List of episodes to be added.
+  <!-- Only shows episodes if it is a TV series instead of a movie -->
+  <div ng-if="details.Type == 'series'">
+    <h3>Seasons:</h3>
+    <div ng-init="getEpisodes()">
+      <div ng-repeat="season in seasonsList.Seasons">
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading" ng-init="getEpisodeDetail(season.Season,episode.Episode)">
+              <h4 class="panel-title">
+                Season {{season.Season}}
+              </h4>
+            </div>
+            <div class="panel-collapse">
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item" ng-repeat="episode in season.Episodes">
+                    Episode {{episode.Episode}} - {{episode.Title}} (Rating: {{episode.imdbRating}})
+                    <div>
+                      {{episodeDetails}}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
