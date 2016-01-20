@@ -15,7 +15,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'LocalStorageModule'
   ])
-  .config(function () {
+  .config(function (localStorageServiceProvider) {
+    localStorageServiceProvider.setPrefix('mov');
   });

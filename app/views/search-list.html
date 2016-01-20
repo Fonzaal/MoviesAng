@@ -14,7 +14,7 @@
       <th>Type</th>
     </tr>
     <tr ng-repeat="movie in moviesList">
-      <td><a ui-sref="details({movieId: movie.imdbID})">{{movie.Title}}</a></td>
+      <td><a ui-sref="details({movieId: movie.imdbID})" ng-click="addHistoryItem(movie.Title)">{{movie.Title}}</a></td>
       <td>{{movie.Year}}</td>
       <td>{{movie.Type}}</td>
     </tr>
