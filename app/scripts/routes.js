@@ -21,5 +21,9 @@ angular.module('moviesApp')
       .state('details',{
         url: '/details/:movieId',
         templateUrl: '/views/details.html'
+      })
+      .state('history',{
+        url: '/history',
+        templateUrl: '/views/history.html'
       });
   });

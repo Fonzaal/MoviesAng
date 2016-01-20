@@ -12,10 +12,7 @@ angular.module('moviesApp')
     //REMINDER: Do not add variables used on the whole app on a single controller.
     //Their values are going to be deleted when you change to another controller.
     //Define them as another service or in global scope.
-    //$scope.searchTermHistory = [];
-    //$scope.historyItems = [];
 
-    $scope.moviesList = {};
     $scope.movie = "";
 
     $scope.addSearchTerm = function (){

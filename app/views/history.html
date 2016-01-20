@@ -1,0 +1,10 @@
+<div ng-controller="historyCtrl">
+  <h3>Previous search terms: </h3>
+  <div ng-repeat="item in searchTerms.Items">
+    {{item.Title}}
+  </div>
+  <h3>Last seen items:</h3>
+  <div ng-repeat="item in historyItems.Items">
+    {{item.Title}}
+  </div>
+</div>
